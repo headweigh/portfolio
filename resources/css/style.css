@@ -1,8 +1,17 @@
 html {
-  font-family: Verdana;
+  font-family: Courier;
   font-size: 16px;
   color: white;
   background-color: black;
+}
+
+html a {
+  color: white;
+}
+
+header h1 {
+  font-weight: lighter;
+  margin-left: 40px;
 }
 
 .main {
@@ -10,29 +19,81 @@ html {
   flex-direction: column;
 }
 
-.intro-text {
+#intro-text {
   padding: 20px;
-  max-width: 100%;
+  min-width: 850px;
+  max-width: 75%;
   height: auto;
   border: 2px solid grey;
   background-color: white;
   color: black;
   margin: 40px;
 }
+.typewriter p {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
 
 .samples {
   display: inline-flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  align-items: center;
 }
 
 .sample-block {
   display: inline-flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  justify-items: space-around;
 }
 
 img {
-  width: 50%;
-  height: auto;
+  width: 250px;
+  height: 210px;
   overflow: hidden;
   border: 1px solid white;
+  margin: 30px 35px 0px 35px;
+}
+
+.sample-block p {
+  color: grey;
+  max-width: 250px;
+  padding: 10px;
+  text-align: center;
+}
+
+.links {
+  margin-left: 100px;
+  font-family: Arial;
+}
+
+.links p {
+  padding: 7px;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: orange;
 }
