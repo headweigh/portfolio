@@ -1,0 +1,38 @@
+html {
+  font-family: Verdana;
+  font-size: 16px;
+  color: white;
+  background-color: black;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-text {
+  padding: 20px;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid grey;
+  background-color: white;
+  color: black;
+  margin: 40px;
+}
+
+.samples {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.sample-block {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+img {
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+  border: 1px solid white;
+}
