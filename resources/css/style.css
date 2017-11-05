@@ -1,6 +1,6 @@
 html {
   font-family: Courier;
-  font-size: 16px;
+  font-size: 10px;
   color: white;
   background-color: black;
 }
@@ -11,42 +11,65 @@ html a {
 
 header h1 {
   font-weight: lighter;
-  margin-left: 40px;
+  font-size: 3.5rem;
+  margin: 40px;
+}
+
+header {
+  height: 75px;
+  border-bottom: 1px solid white;
+}
+
+@media only screen and (min-width : 250px) and (max-width : 480px) {
+  header {
+    text-align: center;
+    height: 125px;
+  }
+
+  header h1 {
+    font-size: 4.5rem;
+  }
+
+  .sample-block img {
+    width: 95%;
+  }
+
+  .sample-block p {
+    font-size: 5rem;
+  }
 }
 
 .main {
   display: flex;
   flex-direction: column;
+  margin: 4rem;
 }
 
 #intro-text {
-  padding: 20px;
-  min-width: 850px;
-  max-width: 75%;
-  height: auto;
-  border: 2px solid grey;
+  padding: 2rem;
   background-color: white;
   color: black;
-  margin: 40px;
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
+
 .typewriter p {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
   animation:
-    typing 5s steps(40, end),
+    typing 4s steps(50, end),
     blink-caret .75s step-end infinite;
 }
 
-/* The typing effect */
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
-/* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
@@ -55,39 +78,37 @@ header h1 {
 .samples {
   display: inline-flex;
   flex-flow: row wrap;
-  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
 }
 
 .sample-block {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  justify-content: baseline;
   justify-items: space-around;
+  margin: 1rem 2rem 0px 2rem;
 }
 
-img {
-  width: 250px;
-  height: 210px;
+.sample-block img {
+  width: 255px;
+  height: 200px;
   overflow: hidden;
   border: 1px solid white;
-  margin: 30px 35px 0px 35px;
 }
 
 .sample-block p {
   color: grey;
-  max-width: 250px;
-  padding: 10px;
+  font-size: 1.5rem;
+  padding: 0px;
   text-align: center;
+  max-width: 250px;
 }
 
 .links {
-  margin-left: 100px;
+  margin-left: 10rem;
   font-family: Arial;
-}
-
-.links p {
-  padding: 7px;
+  font-size: 2rem;
 }
 
 a:link {
@@ -95,5 +116,5 @@ a:link {
 }
 
 a:visited {
-  color: orange;
+  color: gray;
 }
