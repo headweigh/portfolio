@@ -118,3 +118,7 @@ a:link {
 a:visited {
   color: gray;
 }
+
+.descripttxt {
+  font-size: 3rem;
+}
